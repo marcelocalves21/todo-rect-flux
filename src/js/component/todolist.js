@@ -21,8 +21,8 @@ const TodoList = () => {
 				{store.todoList.map((element, index) => (
 					<div key={index} className="border-top border-bottom text-secondary text-center ">
 						{element}
-						<a className="btn btn-danger" onClick={() => actions.deleteItem(element)}>
-							delete
+						<a className="ml-2" type="button" onClick={() => actions.deleteItem(element)}>
+							x
 						</a>
 					</div>
 				))}

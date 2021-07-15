@@ -7,9 +7,13 @@ const TodoList = () => {
 	const [todo, setTodo] = useState("");
 	return (
 		<div className="container container-fluid">
-			<h1 className="text-center">todos</h1>
-			<div className="border text-center ">
-				<input placeholder="No tasks, add a task" onChange={e => setTodo(e.target.value)} value={todo} />
+			<h1 className="text-center">{store.listTitle} to do list</h1>
+			<div className="text-center ">
+				<input
+					placeholder={store.listTitle + "'s list next item"}
+					onChange={e => setTodo(e.target.value)}
+					value={todo}
+				/>
 				<button
 					className="btn btn-success"
 					onClick={() => {

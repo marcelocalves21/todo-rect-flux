@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			listTitle: "",
+			listTitle: "No Title",
 			todoList: []
 		},
 		actions: {
@@ -14,6 +14,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let deleteItem = getStore().todoList;
 				deleteItem = deleteItem.filter(item => element !== item);
 				setStore({ todoList: deleteItem });
+			},
+			deleteList: () => {
+				setStore({ todoList: [] });
 			}
 		}
 	};

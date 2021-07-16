@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
+import { Navbar } from "./component/navbar";
 import injectContext from "./store/appContext";
 import { Todo } from "./views/todo";
 import { Footer } from "./component/footer";
@@ -17,6 +18,7 @@ const Layout = () => {
 		<div className="d-flex flex-column">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
+					<Navbar />
 					<Switch>
 						<Route exact path="/">
 							<Home />

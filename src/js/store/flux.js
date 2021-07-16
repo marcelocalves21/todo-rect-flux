@@ -2,7 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			listTitle: "No Title",
-			todoList: []
+			todoList: [],
+			checkItem: ""
 		},
 		actions: {
 			addTitle: title => (title === "" ? setStore({ listTitle: "No title" }) : setStore({ listTitle: title })),

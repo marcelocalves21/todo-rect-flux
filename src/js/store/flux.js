@@ -3,10 +3,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			listTitle: "No Title",
 			todoList: [],
-			checkItem: ""
+			checkItem: "",
+			border: ""
 		},
 		actions: {
-			addTitle: title => (title === "" ? setStore({ listTitle: "No title" }) : setStore({ listTitle: title })),
+			addTitle: title =>
+				title === ""
+					? setStore({ border: "1px solid red" })
+					: setStore({ listTitle: title }) && setStore({ border: "" }),
 			addItem: newItem => {
 				let newTodoList = getStore().todoList;
 				setStore({ todoList: [...newTodoList, newItem] });
